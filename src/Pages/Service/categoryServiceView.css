@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+
+.user-manage {
+  position: sticky;
+  background-color: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Heading styling */
+.user-header h2 {
+  position: fixed;
+  padding: 50px; /* Adds padding around the header */
+  width: 100%;
+  text-align: flex-start;
+  margin-top: 3rem;
+  margin-bottom: -85px;
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(3, 20, 78);
+  position: relative;
+  z-index: 1; /* Ensures it appears above other elements */
+}
+
+/* Table Container Styles */
+.data-table-containeruser {
+  width: 100%;
+  max-height: calc(50vh - 50px); /* Adjust to fit the pagination */
+  border-radius: 8px; /* Rounded corners */
+  background-color: transparent;
+  min-height: 500px; /* Reduce the min-height to prevent the table from shifting */
+  position: relative; /* Ensure table stays in place */
+  overflow-y: auto;
+}
+
+.data-table-containeruser::-webkit-scrollbar {
+  width: 8px;
+}
+
+.data-table-containeruser::-webkit-scrollbar-thumb {
+  background-color: #f3f3f3; /* Optional: Custom scrollbar thumb color */
+  border-radius: 10px;
+}
+
+.data-table-containeruser::-webkit-scrollbar-thumb:hover {
+  background-color: #f3f3f3; /* Optional: Darker color on hover */
+}
+
+/* Keep the table header sticky at the top */
+.data-table-containeruser thead {
+  top: 0;
+  z-index: 10;
+  background-color: white;
+}
+
+/* Cell Styles */
+.data-table-containeruser .rdt_TableCell {
+  border-right: 1px solid #fcfcfc; /* Border between columns */
+  padding: 10px; /* Add padding for spacing */
+  justify-content: center; /* Aligns icons to the left */
+  align-items: center;
+  border-bottom: 2px solid #ffffff;
+  border-top: 2px solid #f3f3f3;
+}
+
+/* Add border to the last column cell */
+.data-table-containeruser .rdt_TableCell:last-child {
+  border-right: none;
+}
+
+/* Row Hover Effect */
+.data-table-containeruser .rdt_TableRow:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.data-table-containeruser .rdt_TableRow.selected-row {
+  background-color: #b3d1ff; /* Change to the color you want for the selected row */
+  color: #000;
+}
+
+/* Icon Styles */
+.iconuser-button {
+  margin-right: 20px;
+}
+
+/* Additional Styles for Action Icons */
+.action-iconsuser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px; /* Add space between icons */
+}
+
+.iconuser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.edit-iconuser {
+  color: #05593c; /* Green for edit icon */
+  background-color: #caffc0;
+}
+
+.delete-iconuser {
+  color: #b51610; /* Red for delete icon */
+  background-color: #f59898;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.userAlert-success {
+  background-color: #80e499 !important; /* Green background */
+  color: white !important; /* White text */
+  font-size: 500;
+  height: 6vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.userAlert-error {
+  background-color: #db6860 !important; /* Red background */
+  color: white !important; /* White text */
+  font-size: 500;
+  height: 6vh;
+  justify-content: center;
+  width: 100%;
+}

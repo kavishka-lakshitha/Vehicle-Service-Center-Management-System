@@ -1,0 +1,52 @@
+/* Reviews.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+html, body {
+  height: 100%; 
+   overflow-x: hidden; 
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+.review-content {
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.main-box::-webkit-scrollbar {
+    width: 8px; 
+    height: 700px;
+  }
+  
+  .main-box::-webkit-scrollbar-track {
+    background: #f3f3f3; 
+    border-radius: 5px;
+  }
+  
+  .main-box::-webkit-scrollbar-thumb {
+    background: #f3f3f3; 
+    border-radius: 10px;
+  }
+  
+  .main-box::-webkit-scrollbar-thumb:hover {
+    background: #ecececcb; 
+  }

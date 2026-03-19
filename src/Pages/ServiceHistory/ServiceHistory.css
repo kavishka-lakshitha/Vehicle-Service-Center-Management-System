@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px; 
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+
+.serviceHistory-header h2 {
+  padding: 50px; 
+  width: 100%;
+  text-align:  flex-start;
+  margin-top:3rem;
+  margin-bottom: -85px;
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(3, 20, 78);
+  position: relative;
+  z-index: 1; 
+}
+
+.serviceHistory_reservation{
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+
+.serviceHistory-table-container {
+  width: 100%;
+  max-height: calc(50vh - 50px); 
+  border-radius: 8px; 
+  background-color:transparent;
+
+min-height: 500px; 
+position: relative; 
+overflow-y: auto;
+}
+
+.serviceHistory-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.serviceHistory-table-container::-webkit-scrollbar-thumb {
+  background-color:#f3f3f3; 
+  border-radius: 10px;
+}
+
+.serviceHistory-table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #f3f3f3; 
+}
+
+/* Keep the table header sticky at the top */
+.serviceHistory-table-container thead {
+position: sticky;
+top: 0;
+z-index: 10;
+background-color: rgb(255, 255, 255);
+}
+
+
+.serviceHistory-table {
+  width: 100%; 
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+
+.serviceHistory-table-container .rdt_TableCell {
+  border-right: 1px solid #fcfcfc; 
+  padding: 10px; 
+  justify-content: center; 
+  align-items: center;
+  border-bottom: 2px solid #f3f3f3;
+  border-top:2px solid #f3f3f3;
+}
+
+
+.serviceHistory-table-container.rdt_TableCell:last-child {
+  border-right: none;
+}
+
+.serviceHistory-table-container .rdt_TableRow:hover {
+  background-color: #f0eeeede;
+}
+
+
+ .serviceHistory-table-container .rdt_TableRow:hover {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+
+.serviceHistory-table-container .rdt_TableRow.selected-row {
+  background-color: #b3d1ff; 
+  color: #000;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.detail-icons {
+    display: flex;
+    justify-content:center; 
+    align-items: center; 
+    width: 100%; 
+    gap: 15px; 
+}
+
+.doc-icons {
+    color: #080080; 
+    background-color: #67b0f5; 
+}
+
+
+.search-bar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+

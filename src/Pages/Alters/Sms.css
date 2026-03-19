@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+
+/* Heading styling */
+.sms-header h2 {
+  position: fixed;
+  padding: 50px; /* Adds padding around the header */
+  width: 100%;
+  text-align:  flex-start;
+  margin-top: 3rem;
+  margin-bottom: -85px;
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(3, 20, 78);
+  position: relative;
+  z-index: 1; /* Ensures it appears above other elements */
+}
+
+.sms {
+  background-color: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Table Container Styles */
+.sms-table-container  {
+  width: 100%;
+  max-height: calc(50vh - 50px); /* Adjust to fit the pagination */
+  border-radius: 8px; /* Rounded corners */
+  background-color:transparent;
+/* NEW: Ensure a consistent height for the table */
+min-height: 500px; /* Reduce the min-height to prevent the table from shifting */
+position: relative; /* Ensure table stays in place */
+}
+
+/* Keep the table header sticky at the top */
+.sms-table-container thead {
+position: sticky;
+top: 0;
+z-index: 10;
+background-color: rgb(255, 255, 255);
+}
+
+/* DataTable Styles */
+.sms-table-container {
+  width: 100%; /* Full width */
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Cell Styles */
+.sms-table-container .rdt_TableCell {
+  border-right: 1px solid #fcfcfc; /* Border between columns */
+  padding: 10px; /* Add padding for spacing */
+  justify-content: center; /* Aligns icons to the left */
+  align-items: center;
+  border-bottom: 2px solid #f3f3f3;
+  border-top:2px solid #f3f3f3;
+}
+
+/* Add border to the last column cell */
+.sms-table-container .rdt_TableCell:last-child {
+  border-right: none;
+}
+
+/* Row Hover Effect */
+.sms-table-container  .rdt_TableRow:hover {
+  background-color: #f0eeeede;
+}
+
+ /* Row Hover Effect */
+ .sms-table-container .rdt_TableRow:hover {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+.sms-table-container .rdt_TableRow.selected-row {
+  background-color: #b3d1ff; /* Change to the color you want for the selected row */
+  color: #000;
+}
+
+.action-containerSms {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px; /* Space between select and button */
+}
+
+.action-sendsms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Add space between button and any other elements */
+}
+
+.sendsms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text or icon color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.sendsms:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* For Select dropdown */
+.select-alterSms {
+  min-width: 120px;
+  height:45px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-right: 30px;
+}

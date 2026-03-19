@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.users-page {
+  min-height: 100vh;
+  padding: 30px 20px 40px;
+  background: #f3f6fb;
+  display: flex;
+  justify-content: center;
+}
+
+.user-manage {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(15, 34, 80, 0.06);
+  padding: 26px;
+}
+
+.customer-view {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding-top: 14px;
+}
+
+.user-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.user-header h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #102a4a;
+}
+
+.user-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #5a6b82;
+  opacity: 0.85;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.search-bar-container > * {
+  flex: 1 1 280px;
+  min-width: 240px;
+}
+
+.data-table-containeruser {
+  width: 100%;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(16, 24, 64, 0.12);
+  min-height: 380px;
+  max-height: 70vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.data-table-containeruser::-webkit-scrollbar {
+  width: 10px;
+}
+
+.data-table-containeruser::-webkit-scrollbar-thumb {
+  background-color: rgba(16, 24, 64, 0.15);
+  border-radius: 10px;
+}
+
+.data-table-containeruser::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(16, 24, 64, 0.25);
+}
+
+.data-table-containeruser .rdt_Table {
+  min-width: 780px;
+}
+
+.data-table-containeruser .rdt_TableCell {
+  border-right: 1px solid #f3f5f9;
+  padding: 12px 10px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  white-space: normal;
+  word-break: break-word;
+}
+
+.data-table-containeruser .rdt_TableCell:last-child {
+  border-right: none;
+}
+
+.data-table-containeruser .rdt_TableRow:hover {
+  background-color: rgba(16, 24, 64, 0.04);
+}
+
+.data-table-containeruser .rdt_TableRow.selected-row {
+  background-color: rgba(46, 134, 222, 0.18);
+}
+
+.add-iconuser {
+  color: #01134d;
+  background-color: #98d0f5;
+}
+
+.vehicle-details-dialog {
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(15, 34, 80, 0.12);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.vehicle-details-dialog .dialog-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #0f5ead;
+  padding: 18px 0;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.vehicle-details-dialog .vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+}
+
+.vehicle-details-dialog .vehicle-table thead {
+  background-color: #ecf0f1;
+}
+
+.vehicle-details-dialog .vehicle-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #34495e;
+  font-weight: 600;
+  border-bottom: 2px solid #bdc3c7;
+}
+
+.vehicle-details-dialog .vehicle-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background-color 0.3s ease;
+}
+
+.vehicle-details-dialog .vehicle-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.vehicle-details-dialog .vehicle-table td {
+  padding: 10px;
+  font-size: 13px;
+  color: #2c3e50;
+}
+
+.vehicle-details-dialog .no-data-message {
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+
+.vehicle-details-dialog .dialog-actions {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-top: 2px solid #ecf0f1;
+}
+
+.vehicle-details-dialog .dialog-actions .close-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2980b9;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vehicle-details-dialog .dialog-actions .close-button:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .user-manage {
+    padding: 20px;
+  }
+
+  .user-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .search-bar-container {
+    gap: 10px;
+  }
+
+  .data-table-containeruser {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-page {
+    padding: 18px 14px 32px;
+  }
+
+  .user-manage {
+    padding: 18px;
+  }
+
+  .user-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .search-bar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .data-table-containeruser {
+    max-height: 55vh;
+  }
+
+  .data-table-containeruser .rdt_Table {
+    min-width: 100%;
+  }
+
+  .data-table-containeruser .rdt_TableCell {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+}
+

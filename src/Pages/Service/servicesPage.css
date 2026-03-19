@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.service-manage {
+  position: sticky;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  height: 15vh;
+  margin-top: 10rem;
+}
+
+
+.service-header h2 {
+  position: fixed;
+  padding: 50px; /* Adds padding around the header */
+  width: 100%;
+  text-align: flex-start;
+  margin-top:-25px;
+  margin-bottom: -85px;
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(3, 20, 78);
+  position: relative;
+  z-index: 1; /* Ensures it appears above other elements */
+}
+
+.viewButton {
+  background-color: #1f3b6f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.viewButton:hover {
+  background-color: #2f5190;
+}
+
+.servicecontainer {
+  display: flex;
+  gap: 100px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.servicecard, .servicecard1 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  flex: 1;
+  max-width: 50%;
+  min-width: 350px;
+  height: 60vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicecard:hover, .servicecard1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.servicecard h2, .servicecard1 h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1f3b6f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.inputField {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button {
+  width: 10rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.addButton, .addButton1 {
+  background-color: #1f3b6f;
+  color: white;
+}
+.addButton1,.clearButton1{
+  margin-top: 50px;
+}
+
+.clearButton, .clearButton1 {
+  background-color: #b7b7b8;
+  color: white;
+}
+
+.addButton:hover, .addButton1:hover {
+  background-color: #2f5190;
+  opacity: 0.85;
+}
+
+.clearButton:hover, .clearButton1:hover {
+  background-color: #9e9e9f;
+  opacity: 0.85;
+}
+
+.header1, .header2 {
+  background-color: #f1f1f1;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header1{
+  margin-bottom: 60px;
+}
+

@@ -1,0 +1,351 @@
+/* Dashboard container */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; 
+
+}
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+ 
+  .chart-header h2 {
+    margin-bottom: 5px; 
+    padding-top: -1px; 
+    text-align: center;
+    font-size:16px;
+    font-weight: bold
+  }
+  
+
+.body{
+    font-family: "Open Sans", sans-serif;
+    background-color: #f3f3f3;
+   height: 100vh;
+}
+
+
+.dashboard-container.sidebar-collapsed {
+    margin-left: 70px; 
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    align-items: flex-start; 
+    justify-content: space-around;
+    padding: 20px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+
+.dashboard::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.dashboard::-webkit-scrollbar-track {
+  background: #f3f3f3; 
+  border-radius: 5px;
+}
+
+.dashboard::-webkit-scrollbar-thumb {
+  background: #f3f3f3; 
+  border-radius: 10px;
+}
+
+.dashboard::-webkit-scrollbar-thumb:hover {
+  background: #ecececcb; 
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(3, 20, 78);
+    position: relative;
+    margin-top: 8rem;
+    z-index: 1; 
+}
+
+.dashboard-link {
+    text-decoration: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dashboard-box {
+    width: 310px;
+    max-width: 310px;
+    height: 200px; 
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 2px solid #070457;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.dashboard-box:hover {
+    transform: translateY(-10px);
+}
+
+.dashboard-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count {
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.dashboard-image {
+    width: 70px;
+    height: 70px;
+}
+
+.dashboard-box-content p {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 30px;
+    color: #F9A602;
+}
+
+
+.chart-container {
+    width: 100%; 
+    max-width: 750px; 
+    height: 380px; 
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid #070457;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden; 
+}
+
+.chart-container h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(110, 110, 110);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-tooltip {
+    background-color: hsla(0, 1%, 84%, 0.573);
+    border: 1px solid #d6d5d5b1;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.custom-tooltip .label {
+    color: #1f1e1e;
+    font-size: 12px;
+}
+
+
+.rating-card {
+    height: 380px;
+    background-color: #ffffff; 
+    color: #08011c; 
+    border-radius: 15px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%; 
+    max-width: 630px; 
+    display: flex;
+    border: 2px solid #070457;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    margin-top: 20px; 
+    align-self: flex-start; 
+}
+
+
+.rating-score {
+    text-align: center; 
+    margin-bottom: 15px; 
+}
+
+.rating-score h1 {
+    font-size: 50px; 
+    font-weight: 700;
+    margin: 0; 
+    color: #08011c; 
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px; 
+    margin-bottom: 6px;
+}
+
+.star {
+    color: #f1c40f; 
+    font-size: 26px; 
+    margin: 0 8px;
+}
+
+.rating-score p {
+    margin-top: 12px; 
+    font-size: 15px; 
+    font-family: 500;
+    color: #08011c; 
+}
+
+
+.rating-breakdown {
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.rating-row span {
+    font-size: 15px; 
+    width: 20px; 
+    font-weight: 500;
+    color: #08011c; 
+    margin-right: 10px; 
+}
+
+
+.progress-bar {
+    flex-grow: 1; 
+    background-color: #1a1f36; 
+    border-radius: 10px; 
+    height: 9px; 
+    overflow: hidden; 
+}
+
+.progress-fill {
+    height: 100%; 
+    background-color: #13ff06; 
+    border-radius: 10px; 
+    transition: width 0.3s ease; 
+}
+.dashboard-box, .chart-container, .rating-card {
+  overflow: hidden; 
+}
+
+
+@media (max-width: 1680px) {
+  
+    .dashboard-box {
+        width: 100%; 
+        max-width: 280px; 
+    }
+    .chart-container {
+        width: 100%; 
+        max-width: 600px; 
+    }
+    .rating-card {
+        width: 100%; 
+        max-width: 600px; 
+    }
+}
+
+@media (max-width: 1600px) {
+  
+    .dashboard-box {
+        width: 100%; 
+        max-width: 260px;
+    }
+    .chart-container {
+        width: 100%;
+        max-width: 580px; 
+    }
+    .rating-card {
+        width: 100%; 
+        max-width: 580px; 
+    }
+}
+
+@media (max-width: 1440px) {
+
+  .dashboard-box, .chart-container, .rating-card {
+    overflow: hidden; 
+}
+    .dashboard-box {
+        width: 100%; 
+        max-width: 240px; 
+    }
+    .chart-container {
+        width: 100%; 
+        max-width: 550px; 
+    }
+    .rating-card {
+        width: 100%; 
+        max-width: 550px; 
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 720px) {
+ 
+    .dashboard-box {
+        width: 100%;
+        max-width: 300px; 
+    }
+    .chart-container {
+        width: 100%;
+        max-width: 600px;
+    }
+    .rating-card {
+        width: 100%; 
+        max-width: 600px; 
+    }
+}
+
+@media (max-width: 768px) {
+
+    .dashboard-box {
+        width: 100%; 
+        max-width: 150px; 
+    }
+    .chart-container {
+        width: 100%; 
+        max-width: 400px; 
+    }
+    .rating-card {
+        width: 100%;
+        max-width: 400px; 
+    }
+}

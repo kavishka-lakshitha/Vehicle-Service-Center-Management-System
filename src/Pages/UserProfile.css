@@ -1,0 +1,161 @@
+.profile-container {
+    max-width: 1000px; 
+    width: 600px;
+    margin: 120px auto 20px; 
+    padding: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 80vh; 
+}
+  
+  .username-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .profile-header {
+    text-align: center;
+  }
+  
+  .profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid #007bff; 
+    transition: 0.3s ease;
+  }
+  
+  .profile-picture:hover img {
+    opacity: 0.9;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .profile-picture:hover .overlay {
+    opacity: 1; 
+  }
+  
+  .change-photo-label {
+    cursor: pointer;
+    color: #555;
+    margin-top: 10px; 
+    text-decoration: underline;
+  }
+  
+  .file-input {
+    display: none; 
+  }
+  
+  .profile-info {
+    margin: 30px 0;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .info-item label {
+    width: 105px;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .editable-input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    flex: 1;
+    padding: 4px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; 
+    transition: border-color 0.3s ease;
+  }
+  
+  .editable-input:focus {
+    border-color: #007bff; 
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #302dff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .edit-button {
+    width: 100px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    margin-left: 120px;
+    margin-right: 150px; 
+  }
+  
+  .save-button {
+    width: 100px;
+    padding: 10px 25px;
+    background-color: #28a745; 
+  }
+  
+  .save-button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+  }
+  
+
+  @media (max-width: 768px) {
+    .profile-container {
+      padding: 15px;
+    }
+  
+    .info-item label {
+      width: 100px; 
+    }
+  
+    .editable-input {
+      font-size: 14px; 
+    }
+  }

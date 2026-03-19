@@ -1,0 +1,30 @@
+
+/* App.css */
+.app-container {
+    display: flex;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar-expanded .main-content {
+    margin-left: 250px; /* Width of the expanded sidebar */
+}
+
+.sidebar-collapsed .main-content {
+    margin-left: 70px; /* Width of the collapsed sidebar */
+}
+
+.main-content {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.page-content {
+    padding: 20px;
+    /* Additional styling for page content */
+}
+
+/* Ensure the sidebar and navbar have appropriate styling */
+.sidebar {
+    transition: width 0.3s ease;
+}
+

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html, body {
+  height: 100%; /* Ensure html and body take full height */
+   overflow-x: hidden; /* Prevent overflow on body */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+
+/* Heading styling */
+.email-header h2 {
+  position: fixed;
+  padding: 50px; /* Adds padding around the header */
+  width: 100%;
+  text-align: flex-start;
+  margin-top: 2rem;
+  margin-bottom: -80px;
+  font-size: 35px;
+  font-weight: 700;
+  color: #03144e;
+  position: relative;
+  z-index: 1; /* Ensures it appears above other elements */
+}
+
+.email {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Table Container Styles */
+.email-table-container  {
+  width: 100%;
+  max-height: calc(50vh - 50px); /* Adjust to fit the pagination */
+  border-radius: 8px; /* Rounded corners */
+  background-color: transparent;
+  min-height: 500px; /* Reduce the min-height to prevent the table from shifting */
+  position: relative; /* Ensure table stays in place */
+  
+}
+
+/* Keep the table header sticky at the top */
+.email-table-container thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+}
+
+/* DataTable Styles */
+.email-table-container {
+  width: 100%; /* Full width */
+  border-collapse: collapse;
+  table-layout: auto; /* Allow flexible width based on content */
+}
+
+/* Cell Styles */
+.email-table-container .rdt_TableCell {
+  border-right: 1px solid #fcfcfc; /* Border between columns */
+  padding: 10px; /* Add padding for spacing */
+  justify-content: center; /* Aligns icons to the left */
+  align-items: center;
+  border-bottom: 2px solid #f3f3f3;
+  border-top: 2px solid #f3f3f3;
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Show ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Add border to the last column cell */
+.email-table-container .rdt_TableCell:last-child {
+  border-right: none;
+}
+
+/* Row Hover Effect */
+.email-table-container .rdt_TableRow:hover {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+.email-table-container .rdt_TableRow.selected-row {
+  background-color: #b3d1ff; /* Change to the color you want for the selected row */
+  color: #000;
+}
+
+.action-button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #ddd;
+}
+
+.action-button.active {
+  background-color: #041456;
+  color: white;
+}
+
+.send.resend-send {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.send.resend-send:hover {
+  background-color: #218838;
+}
+
+/* For Select dropdown */
+.select-alter {
+  min-width: 120px;
+  height: 45px;
+}
+
+.emailsearch-bar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-right: 30px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Max Width: 1680px */
+@media (max-width: 1680px) {
+  .email {
+    margin-left: 30px;
+  }
+  .email-header h2 {
+    font-size: 30px; /* Adjust header size */
+  }
+}
+
+/* Max Width: 1600px */
+@media (max-width: 1600px) {
+  .email-header h2 {
+    font-size: 28px; /* Further adjust header size */
+  }
+}
+
+/* Max Width: 1440px */
+@media (max-width: 1440px) {
+  .email {
+    margin-left: 20px;
+  }
+  .email-header h2 {
+    font-size: 22px; /* Smaller header size */
+    text-align: center; /* Center align header */
+  }
+  .search-bar-container {
+    margin-right: 15px; /* Adjust margin */
+  }
+}
+
+/* Max Width: 1024px */
+@media (max-width: 1024px) and (max-height: 720px) {
+  .email {
+    margin-left: 10px;
+    margin-right: 10px; /* Add right margin */
+  }
+  .email-header h2 {
+    font-size: 22px; /* Smaller header size */
+    text-align: center; /* Center align header */
+  }
+  .email-table-container {
+    margin-left: 0; /* Center the table */
+    width: 100%; /* Full width */
+  }
+}
+
+/* Max Width: 768px */
+@media (max-width: 768px) {
+  .email {
+    margin: 0; /* Remove side margins */
+  }
+  .email-header h2 {
+    font-size: 22px; /* Smaller header size */
+    text-align: center; /* Center align header */
+  }
+  .search-bar-container {
+    justify-content: center; /* Center search bar */
+    margin-right: 0; /* Remove right margin */
+  }
+  .email-table-container {
+    max-height: 50vh; /* Adjust table height */
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  }
+}
